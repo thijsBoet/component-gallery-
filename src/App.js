@@ -6,6 +6,8 @@ import Dropdown from './components/Dropdown';
 const App = () => {
 	const [selection, setSelection] = useState(null);
 
+	
+
 	const handleSelect = option => {
 		setSelection(option);
 	};
@@ -17,7 +19,23 @@ const App = () => {
 	];
 
 	return (
-		<Dropdown options={options} value={selection} onChange={handleSelect} />
+		<div className='flex'>
+			<Dropdown
+				options={options}
+				value={selection}
+				onChange={handleSelect}
+			/>
+			<Dropdown
+				options={options}
+				value={selection}
+				onChange={handleSelect}
+			/>
+			<Dropdown
+				options={options}
+				value={selection}
+				onChange={handleSelect}
+			/>
+		</div>
 	);
 };
 
